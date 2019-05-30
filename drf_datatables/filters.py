@@ -20,11 +20,11 @@ class GenericFilter(BaseFilterBackend):
         return queryset
 
 
-class CustomSearchFilter(SearchFilter):
+class DTSearchFilter(SearchFilter):
     search_param = 'search[value]'
 
 
-class CustomOrderingFilter(BaseFilterBackend):
+class DTOrderingFilter(BaseFilterBackend):
     ordering_param = 'order[0][column]'
 
     def get_ordering(self, request, view):
